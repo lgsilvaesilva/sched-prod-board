@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="build" content="bc1fda5771c03cfdf986e76270f65b88e1798227" />
+    <title>sched-prod · incidents</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>incidents</h1>
+      <p class="sub">sched-prod · tonight</p>
+    </header>
+    <main data-testid="board">
+      <p data-testid="loader" class="loader" role="status">Loading incidents…</p>
+      <p data-testid="empty" class="empty" hidden>No incidents tonight.</p>
+      <p class="error" role="alert" hidden></p>
+      <div class="layout">
+        <ul data-testid="incident-list" class="list" hidden></ul>
+        <aside data-testid="incident-panel" class="panel" aria-label="Incident" hidden>
+          <div class="p-head"><strong class="p-id"></strong> <span class="p-sev"></span><button type="button" class="p-close" aria-label="Close">×</button></div>
+          <p class="p-what"></p>
+          <p class="p-opened">Opened <time class="p-time"></time></p>
+          <button type="button" data-testid="panel-ack" class="p-ack">Ack</button>
+          <p class="p-state" role="status" hidden></p>
+        </aside>
+      </div>
+    </main>
+    <footer>sched-prod incident board · build <code data-testid="build-sha">bc1fda5771c03cfdf986e76270f65b88e1798227</code></footer>
+  </body>
+</html>
